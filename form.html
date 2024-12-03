@@ -33,14 +33,11 @@
 
     <script>
         document.getElementById("mostrar_seleccion").addEventListener("click", function() {
-            // Obtener el elemento select y el valor seleccionado
             const select = document.getElementById("color");
             const colorSeleccionado = select.options[select.selectedIndex];
-
-            // Actualizar solo la palabra del color
             const colorTexto = document.getElementById("colorTexto");
             colorTexto.textContent = colorSeleccionado.text;
-            colorTexto.style.color = colorSeleccionado.value; // Aplicar el color al texto
+            colorTexto.style.color = colorSeleccionado.value;
         });
 </script>
 </body>
