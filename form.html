@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="icon" href="icono.png" type="image/png">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    Javascript
+    <div id="menu"> 
+        <a href="index.html" class="item_menu"> Inicio</a>
+        <a href="eventos.html" class="item_menu"> Eventos</a>
+        <a href="css.html" class="item_menu"> CSS</a>
+        <a href="form.html" class="item_menu"> Form</a>
+        <a href="funciones.html" class="item_menu">Funciones</a>
+        <a href="location.html" class="item_menu"> Location</a>
+        <a href="window.html" class="item_menu"> Windows</a>
+        <a href="DOM.html" class="item_menu"> DOM</a>
+    </div>
+
+<h2>Formulario con Eventos</h2>
+<label for="color">Seleccione un color:</label>
+    <select id="color">
+        <option value="red">Rojo</option>
+        <option value="blue">Azul</option>
+        <option value="black">Negro</option>
+    </select>
+    <button type="button" id="mostrar_seleccion">Mostrar Selección</button>
+    <p id="resultado">El color seleccionado es: <span id="colorTexto"></span></p>
+
+    <script>
+        document.getElementById("mostrar_seleccion").addEventListener("click", function() {
+            // Obtener el elemento select y el valor seleccionado
+            const select = document.getElementById("color");
+            const colorSeleccionado = select.options[select.selectedIndex];
+
+            // Actualizar solo la palabra del color
+            const colorTexto = document.getElementById("colorTexto");
+            colorTexto.textContent = colorSeleccionado.text;
+            colorTexto.style.color = colorSeleccionado.value; // Aplicar el color al texto
+        });
+</script>
+</body>
+</html>
